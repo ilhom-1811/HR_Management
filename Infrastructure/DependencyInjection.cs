@@ -21,6 +21,8 @@ public static class DependencyInjection
         services.AddAutoMapper(Assembly.GetExecutingAssembly());
         services.AddTransient<IBaseService<Department>, DepartmentService>();
 
+        services.AddTransient<IBaseService<Position>, PositionService>();
+
         services.AddDbContext<ApplicationDbContext>(options =>
         {
             var connectionString = configuration.GetConnectionString("DefaultConnection");
