@@ -49,7 +49,10 @@ namespace Web.API.Controllers
                 return BadRequest("Invalid request data.");
             }
 
-            Department department = mapper.Map<Department>(request);
+            Department department = await departmentService.GetAsync(id, token);
+
+            department.Name = request.Name;
+            department.Description = request.Description;
 
             await departmentService.UpdateAsync(department, token);
 
