@@ -13,8 +13,14 @@ public class DepartmentMapProfile : Profile
 
         CreateMap<Department, CreateDepartmentsRequests>();
 
+        CreateMap<SingleDepartmentResponse, Department>();
+
+        CreateMap<Department, SingleDepartmentResponse>();
+
         CreateMap<GetAllDepartmentsRequest, GetAllDepartmentsResponse>();
 
         CreateMap<UpdateDepartmentRequest, Department>();
+
+
     }
 }

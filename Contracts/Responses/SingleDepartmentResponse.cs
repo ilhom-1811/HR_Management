@@ -13,6 +13,5 @@ public record class SingleDepartmentResponse
     public string Name { get; init; }
     public string Description { get; init; }
     public Employee Manager { get; init; }
-    public ICollection<Employee> Employees { get; init; }
 
 }
